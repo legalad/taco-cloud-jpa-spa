@@ -1,0 +1,19 @@
+<div th:fragment="navbar">
+    <nav>
+        <div class="container">
+            <h1>Taco Cloud</h1>
+            <img class="logo" src="/images/taco-logo.svg">
+            <div class="menu">
+                <a th:href="@{/}" class="is-active">Home</a>
+                <a th:href="@{/design}">Zamów</a>
+                <a th:href="@{/login}">Konto</a>
+                <a href="#">Koszyk</a>
+            </div>
+            <button class="tacos">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+</div>

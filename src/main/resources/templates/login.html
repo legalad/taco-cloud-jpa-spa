@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Aplikacja Taco Cloud</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+    <link rel="stylesheet" th:href="@{/login_styles.css}"/>
+    <link rel="stylesheet" th:href="@{/nav_styles.css}"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+<div th:if="${error}">
+    Logowanie nieudane. Sprawdź poprawność nazwy użytkownika i hasła.
+</div>
+<div class="container2">
+    <div class="forms">
+        <div class="form login">
+            <span class="title">Logowanie</span>
+            <form method="POST" th:action="@{/login}" id="loginForm">
+                <div class="input-field">
+                    <input type="text" placeholder="Podaj swój email" required name="username" id="username" /><br/>
+                    <i class="uil uil-envelope"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Podaj swoje hasło" required name="password" id="password" /><br/>
+                    <i class="uil uil-lock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <input type="checkbox" id="logCheck">
+                        <label for="logCheck" class="text">Zapamiętaj mnie</label>
+                    </div>
+                    <a href="#" class="text">Zapomniałeś hasła?</a> <!--to do obsłużenia kiedyś-->
+                </div>
+                <div class="input-field submit">
+                    <input type="submit" value="Zaloguj się"/><br/>
+                </div>
+                <!--<div class="input-field"></div>
+                <input type="text" placeholder="Podaj swój email" required name="username" id="username" /><br/>
+                <i class="uil uil-envelope"></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Podaj swoje hasło" required name="password" id="password" /><br/>
+                    <i class="uil uil-lock"></i>
+                </div>-->
+            </form>
+            <div class="login-signup">
+                <span class="text">Jesteś nowy?
+                <a th:href="@{/register}" class="text signup-text">Zarejestuj się teraz</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

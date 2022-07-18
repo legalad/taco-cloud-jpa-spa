@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Aplikacja Taco Cloud</title>
+</head>
+<body>
+<link rel="stylesheet" th:href="@{/styles.css}"/>
+<link rel="stylesheet" th:href="@{/login_styles.css}"/>
+<link rel="stylesheet" th:href="@{/nav_styles.css}"/>
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <div th:replace="fragments/navbar :: navbar"></div>
+  <div class="container2">
+    <div class="forms">
+      <div class="form login">
+        <span class="title">Rejestracja</span>
+        <form method="POST" th:action="@{/register}" id="registerForm">
+          <div class="input-field">
+            <input type="text" placeholder="Podaj swój email" required name="username" id="username" /><br/>
+            <i class="uil uil-envelope"></i>
+          </div>
+          <div class="input-field">
+            <input type="password" placeholder="Podaj swoje hasło" required name="password" id="password" /><br/>
+            <i class="uil uil-lock icon"></i>
+            <i class="uil uil-eye-slash showHidePw"></i>
+          </div>
+          <div class="input-field">
+            <input type="password" placeholder="Podaj swoje hasło" required name="confirm" id="confirm" /><br/>
+            <i class="uil uil-lock icon"></i>
+            <i class="uil uil-eye-slash showHidePw"></i>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Imię i nazwisko" required name="fullname" id="fullname" /><br/>
+            <i class="uil uil-user"></i>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Województwo" required name="state" id="state" /><br/>
+            <i class="uil uil-map-marker-shield"></i>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Miejscowość" required name="city" id="city" /><br/>
+            <i class="uil uil-building"></i>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Ulica" required name="street" id="street" /><br/>
+            <i class="uil uil-home"></i>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Kod pocztowy" required name="zip" id="zip" /><br/>
+            <i class="uil uil-postcard"></i>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Telefon" required name="phone" id="phone" /><br/>
+            <i class="uil uil-phone"></i>
+          </div>
+          <div class="checkbox-text">
+            <div class="checkbox-content">
+              <input type="checkbox" id="logCheck">
+              <label for="logCheck" class="text">Zapamiętaj mnie</label>
+            </div>
+          </div>
+          <div class="input-field submit">
+            <input type="submit" value="Zarejestruj się"/><br/>
+          </div>
+        </form>
+        <div class="login-signup">
+                  <span class="text">Masz konto?
+                  <a th:href="@{/login}" class="text signup-text">Zaloguj się</a>
+                  </span>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--<form method="POST" th:action="@{/register}" id="registerForm">
+  &lt;!&ndash;<label for="username">Nazwa użytkownika: </label>
+  <input type="text" name="username"/><br/>
+  <label for="password">Hasło: </label>
+  <input type="password" name="password"/><br/>
+  <label for="confirm">Potwierdź hasło: </label>
+  <input type="password" name="confirm"/><br/>
+  <label for="fullname">Pełne imię i nazwisko: </label>
+  <input type="text" name="fullname"/><br/>
+  <label for="street">Ulica: </label>
+  <input type="text" name="street"/><br/>
+  <label for="city">Miejscowość: </label>
+  <input type="text" name="city"/><br/>
+  <label for="state">Województwo: </label>
+  <input type="text" name="state"/><br/>
+  <label for="zip">Kod pocztowy: </label>
+  <input type="text" name="zip"/><br/>
+  <label for="phone">Telefon: </label>
+  <input type="text" name="phone"/><br/>
+  <input type="submit" value="Zarejestruj"/>&ndash;&gt;
+</form>-->
+</body>
+</html>

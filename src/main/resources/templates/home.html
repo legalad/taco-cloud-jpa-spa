@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplikacja Taco Cloud</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+    <link rel="stylesheet" th:href="@{/nav_styles.css}"/>
+    <link rel="stylesheet" th:href="@{/home_styles.css}"/>
+</head>
+<body>
+    <div th:replace="fragments/navbar :: navbar"></div>
+        <!--<img th:src="@{/images/TacoCloud.png}"/>-->
+        <!--<form method="POST" th:action="@{/logout}" id="logoutForm">
+            <input type="submit" value="Wyloguj się"/>
+        </form>-->
+    <header id="showcase">
+        <h1>Witaj w Taco Cloud</h1>
+        <p class="quot">"Nie można dobrze myśleć, kochać i dobrze spać, jeśli nie jadło się dobrze."</p>
+        <p>Virginia Woolf</p>
+        <p class="quot">"Nie możesz po prostu zjeść dobrego jedzenia. O tym też musisz porozmawiać. I musisz o tym porozmawiać z kimś, kto rozumie ten rodzaj jedzenia." </p>
+        <p>Kurt Vonnegut</p>
+        <a th:href="@{/design}" class="button">Stwórz swoje taco</a>
+    </header>
+</body>
+</html>

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: var(--dark);
+    padding: 16px 32px;
+    border-bottom: 3px solid var(--primary);
+
+}
+.logo{
+    height: 50px;
+    justify-content: left;
+
+
+}
+
+.menu {
+    display: none;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+    margin: 0 -16px;
+}
+.menu a {
+    color: #FFF;
+    margin: 0 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 8px 16px;
+    border-radius: 99px;
+}
+.menu a.is-active, .menu a:hover {
+    background-color: var(--primary);
+    color: var(--dark);
+    -webkit-text-stroke: 0.4px #8a6a0c;
+}
+
+.tacos {
+    display: block;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+    appearance: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.tacos span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: var(--light);
+    border-radius: 6px;
+    z-index: 1;
+
+    transform-origin: 0 0;
+
+    transition: 0.4s;
+}
+
+.tacos:hover span:nth-child(2) {
+    background: linear-gradient(45deg, red, green, red, green, red);
+}
+.tacos:hover span:nth-child(1){
+    transform: translateY(2px);
+    background-color: var(--primary);
+}
+.tacos:hover span:nth-child(3){
+    transform: translateY(-2px);
+    background-color: var(--primary);
+}
+@media (min-width: 768px) {
+    .tacos {
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
+}
+h1 {
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 900;
+}
